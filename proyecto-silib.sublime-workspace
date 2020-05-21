@@ -1,0 +1,1063 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "/*$.post(\"nextQuestionPost\"\n\t\t\t\t,{\n\t\t\t\t\tid: $('#id').val(),\n\t\t\t\t\tusuario: $('#usuario').val(),\n\t\t\t\t\tcodigo: $('#codigo').val(),\n\t\t\t\t\tfoto: $('#foto').val(),\n\t\t\t\t\tevidencia: $('#evidencia').val(),\n\t\t\t\t\trespuesta: $('#respuesta').val()\n\t\t\t\t  }\n\t\t\t\t,function(mav){\n\t\t\t\t\t  $('.modal-body').html(mav ,function(){\n\t\t\t\t\t\t  $('.myFormQuestionnaire #exampleModal').modal({show:true});\n\t\t\t\t\t  });\t\t\t\t\t  \n\t\t\t\t  } \n\t\t\t);*/\n\n\n$.ajax({\n\t\t\t  type: \"POST\",\n\t\t\t  url: \"nextQuestionPost\",\n\t\t\t  data: {\n\t\t\t\t\tid: $('#id').val(),\n\t\t\t\t\tusuario: $('#usuario').val(),\n\t\t\t\t\tcodigo: $('#codigo').val(),\n\t\t\t\t\tfoto: $('#foto')[0].files[0],\n\t\t\t\t\tevidencia: $('#evidencia').val(),\n\t\t\t\t\trespuesta: $('#respuesta').val()\n\t\t\t\t  },\n\t\t\t  success: function(mav){\n\t\t\t\t  $('.modal-body').html(mav ,function(){\n\t\t\t\t\t  $('.myFormQuestionnaire #exampleModal').modal({show:true});\n\t\t\t\t  });\t\t\t\t\t  \n\t\t\t  },\n\t\t\t  enctype: 'multipart/form-data',\n\t\t\t  dataType: false\n\t\t\t});",
+			"settings":
+			{
+				"buffer_size": 928,
+				"line_ending": "Windows",
+				"name": "/*$.post(\"nextQuestionPost\""
+			}
+		},
+		{
+			"contents": "@GetMapping(\"/checklogin\")\n\tpublic @ResponseBody ModelAndView showLoginForm(@RequestBody Usuario usuario) {\n\t\tModelAndView mav = new ModelAndView();\n\t\tSystem.out.println(usuario.getUsuario());\n\t\tSystem.out.println(usuario.getClave());\n\t\tUser user = userServicio.autenticacion(usuario);\n\t\tint role = user.getRoleId().getRoleId();\n\n\t\tswitch (role) {\n\t\tcase 1:\n\t\t\tmav.setViewName(\"dashboardAdmin\");\n\t\t\tbreak;\n\t\tcase 2:\n\t\t\tmav.setViewName(\"dashboardBack\");\n\t\t\tbreak;\n\t\tcase 3:\n\t\t\tmav.setViewName(\"dashboardAuditor\");\n\t\t\tbreak;\n\t\tcase 4:\n\t\t\tmav.setViewName(\"dashboardCust\");\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tmav.setViewName(\"login\");\n\t\t}\n\t\tmav.addObject(\"username\", user.getUsuario());\n\t\tmav.addObject(\"role\", role);\n\t\treturn mav;\n\t}",
+			"settings":
+			{
+				"buffer_size": 719,
+				"line_ending": "Windows",
+				"name": "@GetMapping(\"/checklogin\")"
+			}
+		},
+		{
+			"file": "/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/resources/static/js/dashboardAdmin.js",
+			"settings":
+			{
+				"buffer_size": 1386,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<nav class=\"navbar\" style=\"background-color: #00a1d6;\">",
+			"settings":
+			{
+				"buffer_size": 55,
+				"line_ending": "Windows",
+				"name": "<nav class=\"navbar\" style=\"background-color: #00a1"
+			}
+		},
+		{
+			"contents": "<tr th:each=\"instance : ${analysis.instanceMap}\">\n    <td th:text=\"${instance.key}\">keyvalue</td>\n    <td th:text=\"${instance.value.numOfData}\">num</td>\n</tr>\n\t\n",
+			"settings":
+			{
+				"buffer_size": 161,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!-- Cuestionarios -->\n        <li class=\"nav-item\">\n          <a class=\"nav-link tQuest\" href=\"#\">\n            <i class=\"fas fa-fw fa-question-circle\"></i>\n            <span>Questionnaires</span></a>\n        </li>\n\n\n        tableTypeQuestionnaire\n\n\n\n<!-- Choose Section-->\n\t\t\t<label>Section</label>\n\t\t\t<div class=\"form-label-group section\">\n\t\t\t\t<select class=\"form-control\" id=\"tipoAuditoria\" disabled required=\"required\">\n\t\t\t\t\t\t\t\t<option value=\"0\" disabled selected>Select Questionnaire Type</option>\n\t\t\t\t\t\t\t\t<option th:each=\"section : ${sections}\" th:value=\"${section.seccionId}\" th:text=\"${section.seccion}\"/>\n\t\t\t\t\t\t\t</select>\n\n\t\t\t\t</select>\n\t\t\t</div>\n\n\n\n\t\t\t$(\"#cuerpo\").append('<tr><td><a th:href=\"@{/findQuest/(id=${'+quest.preguntasId+'})}\" class=\"btn btn-outline-primary fas fa-pencil-alt eBtn\">_</a><a th:href=\"@{/deleteQuest/(adminId=${'+quest.preguntasId+'})}\" class=\"btn btn-outline-danger fas fa-trash-alt dBtn\"></a></td><td th:text=\"${'+quest.preguntas+'}\"></td></tr>');\n\n\t\t\t<a class=\"btn btn-outline-primary fas fa-pencil-alt eBtn\">_</a><a class=\"btn btn-outline-danger fas fa-trash-alt dBtn\"></a>\n\n\t\t\thref=\"/findQuest/(id=${'+quest.preguntasId+'})\"\n\t\t\thref=\"/deleteQuest/(adminId=${'+quest.preguntasId+'})\"\n\n\t.append('<p class=\"alert alert-danger\">'++'</p>');",
+			"settings":
+			{
+				"buffer_size": 1275,
+				"line_ending": "Windows",
+				"name": "<!-- Cuestionarios -->"
+			}
+		},
+		{
+			"contents": "@Override\n\tpublic CheckList reply(int informeId) {\n\t\tInforme informe = informeRepository.findById(informeId).get();\n\t\tList<CheckList> preguntas = checkListRepository.findAllBySolicitudAuditoriaId(informe.getDatoComunId().getSolicitudAuditoriaId());\n\t\tfor (CheckList pre : preguntas) \n\t\t{ \n\t\t    if (pre.getDatoEspecificoId().isRespuesta()==false) {\n\t\t\t\treturn pre;\n\t\t\t}\n\t\t}\n\t\treturn null;\n\t}",
+			"settings":
+			{
+				"buffer_size": 391,
+				"line_ending": "Windows",
+				"name": "@Override"
+			}
+		},
+		{
+			"contents": "kemishjamesson",
+			"settings":
+			{
+				"buffer_size": 14,
+				"line_ending": "Windows",
+				"name": "kemishjamesson"
+			}
+		},
+		{
+			"contents": "ionic cordova build android --release --prod \n\nkeytool -genkey -v -keystore SIGA-UCE-MOVIL-KEY.jks -keyalg RSA -keysize 2048 -validity 100000 -alias SIGA-UCE-MOVIL\n\njarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore SIGA-UCE-MOVIL-KEY.jks android-release-unsigned.apk SIGA-UCE-MOVIL\n\nzipalign -v 4 android-release-unsigned.apk SIGA-MOVIL.apk \n\n\n$2a$10$MKIZn2y8EZaqVKLBH7aIL.HrNHBKyaum7wtVR5H/O42XXovlKyxoK\n$2a$10$bcomAJCRK16ZPiZ6VEdjLOkQKXDOTec6rKJ031ayAAC1mlP2u.n8W\n\nC:\\Program Files\\Java\\jdk1.8.0_171\\bin\n\n\n\nselect TABLE_NAME, COLUMN_NAME, COLUMN_COMMENT from INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA = 'database_2';",
+			"settings":
+			{
+				"buffer_size": 637,
+				"line_ending": "Windows",
+				"name": "ionic cordova build android --release --prod"
+			}
+		},
+		{
+			"contents": "Battlefield 5 [Full] [Español]\n\nContraseña: www.megajuegosfree.com\n\nMEGA\n\nhttps://mega.nz/#!kNV0wSAT!yzLAHNItFxS4ZA0Tgu3jmvCkIP659cUcIVOxUmkqPJI\nhttps://mega.nz/#!sEEizIJA!1VzF1EGHUi3REMONrUn5F-N0ZI0BEtfKohZVWKarMCQ\nhttps://mega.nz/#!JAF0Fa5I!0ICm-iHkBP_HsKV5Mj-sfYWhsNc5Ak2EUpHxxuDYOGk\nhttps://mega.nz/#!NMcSWSyD!8wDLKUwccbWvjpCwBS10JV-ApN4WhaZnNxQGF18H89g\nhttps://mega.nz/#!wFd0nChR!__Z1ZU0WP-_FErjFCymEjcFK8pdGtUznYeJoIkhGIc4\nhttps://mega.nz/#!wMdUzIBA!LeCXpXyYeKdbKlSsIryiHYIIvE5S3AUPceuPsQtw3fk\nhttps://mega.nz/#!xVdGFIiZ!55tIwvTMALxNn5guix_EDsR3PMwD0ZO-FKEkuKS7Vbk\nhttps://mega.nz/#!VVVCHaQB!PZ0XeXMXHtn3FI50AyybrkWcmbtOcY6O7SW7Up_kl7I\nhttps://mega.nz/#!gQUShagZ!Cpc1tQFPcsg1ST5mZUMIno2MkkVP0fxCbTPfQb2sy4A\nhttps://mega.nz/#!RVEgWILa!vGIS-d3wrvC0Q7n8jW9YamT0ogU2-Ky8ApANtS1HIFQ\nhttps://mega.nz/#!VcdQgKBQ!ZT5aGCNd1qq_tmlh57WFgbzdVkfDjBsJhgIfZngPMe0\nhttps://mega.nz/#!EBFmwSob!QagF6AMhxMBiz70HlAeXDQ2nf-W0_OSyDBrjiiVjrkM\nhttps://mega.nz/#!VQNQ2QqT!DIkcllZNR9O4vQ7Zl7aWu5SUq3Zk1ZS9SIMp7i2eE-0\nhttps://mega.nz/#!sJNUxAjT!T6bNUdO96rGqXyiwp_rFB4v_J5O2w1oTzzzM18JPzOQ\nhttps://mega.nz/#!xcdkBKwB!mC21G0ngheven7qh-kytwX4ckakPZGTVLxrsj5QOlR0\nhttps://mega.nz/#!BYMmTCJS!_Ggz5v8dob54hxmQS1XzTyaNfC0soVk_RfDxcGlekg8\nhttps://mega.nz/#!IBN23ABZ!K6JeDcy4oGVbhmdjIlcl9ibhhFBEReZEB4zmYXs4qLU\nhttps://mega.nz/#!FQVQmSSZ!my89HZY4VFjMqZ20UuKCDFNPkvr7QtAFG3YB-omT2CY\nhttps://mega.nz/#!JAVgDSiS!Wn__S0cjnNgkjRFbACBVwZa7ZfPJZE0C37dCNywwTjI\nhttps://mega.nz/#!xYEEzAII!eKDBRuXNHuYq5AIsKzXZM1kG9T9GjNhP0v4_Pk_eavY\nhttps://mega.nz/#!1MEWgKQD!eUwUUrZ0j8ssmqHIvJrT4Zr4pCFldfQ_pO3LyE7mxDo\nhttps://mega.nz/#!ZAEijQbL!S7OdeSsUQbCCzyPKnL3ZOIp-NHg1p6MT7Vbi9BdvXgw\nhttps://mega.nz/#!UId2EYYB!I0qlPMiIbSt-0mWlkLZnI7URVhFaOBGmBL4V110F1nE\nhttps://mega.nz/#!ZEN0EKjY!rwNbLJeCqFDbkTKqb2Z1MM1oTlo3VGSCS8-CgxIvbZk\nhttps://mega.nz/#!lYEgnQwR!PE7Un18JG4Lwz6iyQ4lj4etGjxpv2dPGiNXtX1__BRA\nhttps://mega.nz/#!oAUUWarB!hTnHlQ6pJpKv-Ncda3y3Dmy7NmToOoeAfwS3XIpGNCk\n\nGOOGLE DRIVE\n\nhttps://drive.google.com/file/d/1wmqqqCZNYBpVBlwi7NFcramvYKxGjmmB----\nhttps://drive.google.com/file/d/1t-UNwUoeGieADOJzxbqoxFc8XnjmK1UJ\nhttps://drive.google.com/file/d/1Yz1rZdD0rWJTunJxZZ-ZKNLWNAzcKS2o\nhttps://drive.google.com/file/d/1DID649o8uosk-d7OCDUBXhQqAAh_z8v5\nhttps://drive.google.com/file/d/1SYYhPDt8DwMQ6_4Cchp1lv1rCoLw36ke\nhttps://drive.google.com/file/d/1eSLSUA2ZyynQ5mXgyiHGZ6u12qlQaPzY\nhttps://drive.google.com/file/d/1QgWQPNsjlYKN4KTYfQXqzl-1ynkhoGym\nhttps://drive.google.com/file/d/1IcXIFzrU-Y3zU9G6fMXTbd39cfIERent\nhttps://drive.google.com/file/d/1RzkvL0C5ivhSTnC__46JYlgvt0ZH-7Ze\nhttps://drive.google.com/file/d/1-jZoL0t33xeszE6erDdnPq-VQAlwXTyb\nhttps://drive.google.com/file/d/1lJFn0BKI-2AtgROPK6Kdq3pcoOdYYy08\nhttps://drive.google.com/file/d/1-zY3XojnxByO3S3jyt4juYWKgoIhE8uU\nhttps://drive.google.com/file/d/1na2yQnN-2cu9ZQjc3HVHgDxlUstyMb-O\nhttps://drive.google.com/file/d/1-a__CRRqav4MTIt0p8DJIVk2wZ1PbJzd\nhttps://drive.google.com/file/d/1OgW8gYRQi3H9fx9nL3gdg_SXgrkLNSgP\nhttps://drive.google.com/file/d/1MdngpPZh-LJ-jd7c1EtGqQBb1kh9ltIb\nhttps://drive.google.com/file/d/1NayIvc-ZVDclV7ODYfhbCjOWtXtSBcNy\nhttps://drive.google.com/file/d/1FJzxLOxeTwY6vUBYNpA58PwJ9roAJmtg\nhttps://drive.google.com/file/d/1iCER_acNDjKXFW_wU3EAcApK-xD-WSFy\nhttps://drive.google.com/file/d/1tCOwj6sQCKNR_aJ1-F26RyPc4vNOmwEH\nhttps://drive.google.com/file/d/107zUoRnmlBCUnFU3BXySU3jQ4J9ev5y3\nhttps://drive.google.com/file/d/1epMg-y0wJBltxUSOBsfnU33gd8rzhMT6\nhttps://drive.google.com/file/d/1mzDfz2AASWILVa8c_Jz0HpudyJrEthZZ\nhttps://drive.google.com/file/d/1eosN2-1xAPwtY_02VYLXO0LeDWQf-28H\nhttps://drive.google.com/file/d/1ZTMCoeyprUM5JF_EkwX26KF1kWkjQ18m\nhttps://drive.google.com/file/d/1aYEtdWTt5TWWRF8dZL0VwuvWbFPKTt96\n\n1FICHIER\n\nhttps://1fichier.com/?z5gfcfpk0b07vqt8dg5d\nhttps://1fichier.com/?hp6a224z8j6334gtdtye\nhttps://1fichier.com/?9fwm2bnyea1m7gyy1w3b\nhttps://1fichier.com/?1mryk43aut83stm58ja2\nhttps://1fichier.com/?lmgitedea0nd32z3u0kf\nhttps://1fichier.com/?hfs5uc7c0y594u3b08bo\nhttps://1fichier.com/?lteu7xss5egnd6elzhr3\nhttps://1fichier.com/?lgq8k81rd8x108fdu1xs\nhttps://1fichier.com/?7ztrhhxn7ahk7v4ana0f\nhttps://1fichier.com/?aml79e1st8mwel3jxr4w\nhttps://1fichier.com/?qmbnicoura55xgzn1rxg\nhttps://1fichier.com/?ska10dmi7u1uc083re4s\nhttps://1fichier.com/?m9973he55cb1g7sn8s9a\nhttps://1fichier.com/?i2y10ad01l6s27q0d9w9\nhttps://1fichier.com/?r6legizuoys9d9r8cfwz\nhttps://1fichier.com/?s32mf7gofx9ts1r8mppw\nhttps://1fichier.com/?99g2kiofc5mopqocnoxy\nhttps://1fichier.com/?egjzijjrk2k29x0v2889\nhttps://1fichier.com/?d46bpclt3bv8i26ffqqx\nhttps://1fichier.com/?3bec21z6l88yscxw7rx6\nhttps://1fichier.com/?nv9vhipie252nlj7ckam\nhttps://1fichier.com/?lbfcjr5isgncz92i956s\nhttps://1fichier.com/?n2yd8p72ofoid86xcwgf\nhttps://1fichier.com/?h0wbdquy4q0o9z63zwui\nhttps://1fichier.com/?67b16hb88xpgwf64ef54\nhttps://1fichier.com/?tuo7yvln4ri0m6s54vsd",
+			"settings":
+			{
+				"buffer_size": 4783,
+				"line_ending": "Windows",
+				"name": "Battlefield 5 [Full] [Español]"
+			}
+		},
+		{
+			"contents": "Unravel 2\n\nContraseña: www.megajuegosfree.com\n\nMEGA\n\nhttps://mega.nz/#!zHR0AKpR!vDbImnRmG27dGgg20nhR9kPz0bsgsfD8fUc-2TFtMzE\nhttps://mega.nz/#!rGRkHCCa!pS-zVl2Kxi7Cd84y_qtFKduGil0XUvMv2JfHBtRtOVE\nhttps://mega.nz/#!CCA2UAwZ!5RQs1ZuKT4aHO9EN7gtFWJ2Xj8jJW2cKYoq_BH_VZy4\n\nGOOGLE DRIVE\n\nhttps://drive.google.com/file/d/1fDo4pH1HPcBH01acb42_l0zn14HPixUl\nhttps://drive.google.com/file/d/1Ck1APOwi4UEG5xJRE9nfLKCNDXkw_MSM\nhttps://drive.google.com/file/d/1YnI8__ZacGR-55SrzvtFkaimbww0XEJo\n\n1FICHIER\n\nhttps://1fichier.com/?6cjtef8g11bhk7947w90\nhttps://1fichier.com/?emotgx6lhzuv4uktydo4\nhttps://1fichier.com/?ciugny0xoekzxwh2pwfa\n\n",
+			"settings":
+			{
+				"buffer_size": 620,
+				"line_ending": "Windows",
+				"name": "Unravel 2"
+			}
+		},
+		{
+			"contents": "Cuphead\n\nContraseña: www.megajuegosfree.com\n\n\nGOOGLE DRIVE\n\nhttps://drive.google.com/file/d/1UDAwWK2ioaWCzalQkJtNfMT2qr-RLdN3\nhttps://drive.google.com/file/d/1DkOERNeWfELajRLuUQE1Y7xEIrmKeHae",
+			"settings":
+			{
+				"buffer_size": 191,
+				"line_ending": "Windows",
+				"name": "Cuphead"
+			}
+		},
+		{
+			"contents": "SELECT TABLE_NAME,*\nFROM INFORMATION_SCHEMA.COLUMNS\nWHERE COLUMN_NAME LIKE '%Cotizacion%'\n\n\nSELECT TABLE_NAME,*\nFROM INFORMATION_SCHEMA.COLUMNS\nWHERE COLUMN_NAME LIKE '%Cotizacion%'\n\n\nSELECT * FROM INFORMATION_SCHEMA.TABLES \nWHERE table_type='BASE TABLE'  and TABLE_NAME like '%operac%'\nORDER BY table_name\n\n\nselect * from [inversiones].[Operacion]\n\n\n\nSELECT distinct TABLE_SCHEMA FROM INFORMATION_SCHEMA.TABLES \nWHERE table_type='BASE TABLE' \nORDER BY table_name\n\nSELECT *\nFROM Information_Schema.Columns\nWHERE TABLE_NAME = ‘NombreTabla’\nORDER BY COLUMN_NAME\n----------------------\nselect * \nfrom cartera.OperacionCartera\nwhere tramite = 246\n\nselect * \nfrom tramites.Tramite\nwhere IdTramite = 246\n\nselect * \nfrom clientes.Cliente\nwhere IdCliente = 204967\n\nselect *\nfrom cartera.OperacionCartera\n\n\nSELECT COLUMN_NAME\nFROM Information_Schema.Columns\nWHERE TABLE_NAME = 'OperacionCartera'\n\n\nselect o.NombreCliente, o.oficina, o.oficial, o.NumeroOperacion, o.moneda, \no.TipoCliente, aux4.Identificacion, o.Estado, o.DestinoEconomico, aux4.Valor, \no.MontoAprobado, o.FechaEmision, o.FechaVencimiento, o.Plazo, o.TasaInteres, cp.Monto\n\nfrom cartera.OperacionCartera o\nJOIN (select t.IdTramite, t.IdCliente, aux2.Valor, aux3.Identificacion\nfrom tramites.Tramite t\nJOIN (select cg.Cliente, aux1.Valor\nfrom garantias.ClienteGarantia cg\nJOIN (select IdGarantia, Valor \nfrom garantias.DetalleGarantia) AS aux1\non cg.IdGarantia=aux1.IdGarantia) AS aux2\non t.IdCliente=aux2.Cliente\nJOIN (select IdCliente, Identificacion\nfrom clientes.Cliente) AS aux3\non t.IdCliente=aux3.IdCliente) AS aux4\non o.tramite= aux4.IdTramite\nJOIN cartera.Pago cp\non o.IdOperacionCartera= cp.IdOperacionCartera",
+			"settings":
+			{
+				"buffer_size": 1675,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "http://juegos.hopepaste.download/?v=843\n\nhttp://juegos.hopepaste.download/?v=1544\nhttps://drive.google.com/file/d/1aXNtFhsRwsGOhp2oxrnTYKiup__dDbtx\nhttps://drive.google.com/file/d/1uZWCpy5jsdUlx4nOpbnmGF_RNbtMWVlt\nhttps://drive.google.com/file/d/12uWVMaoLqSTPQaOR4vX8KY8BFha6GZPh\nmegajuegosfree\n\n\n\nthe big bang theory\n\nhttps://1fichier.com/?yoztsmz4yogbnalqui3m\nhttps://1fichier.com/?oez3b1qadpsxel7cry8i\nhttps://1fichier.com/?qsnratle9b1j6m3k0gml\nhttps://1fichier.com/?jvtw9r5j48m6bkrmfp7w\nhttps://1fichier.com/?eqiiaxer10cf7bgen2ja\nhttps://1fichier.com/?ota07o18nyp288l47xx9\nhttps://1fichier.com/?tgic77k6xvh0et3jjqnx\nhttps://1fichier.com/?iboum1i5mzec47m9exf5\nhttps://1fichier.com/?ervrzdaf1ouyqx6examd\nhttps://1fichier.com/?m2eyz4xrltlbk752fi4q\n\nE487-6DB1 \nUUID=E487-6DB1  /home/pi/RetroPie      vfat    nofail,user,uid=pi,gid=pi 0       2",
+			"settings":
+			{
+				"buffer_size": 843,
+				"line_ending": "Windows",
+				"name": "http://juegos.hopepaste.download/?v=843"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html xmlns:th=\"http://www.thymeleaf.org\">\n\n<head>\n<meta charset=\"utf-8\">\n\n\n<title>Perfil</title>\n\n<!-- Custom styles for this template -->\n<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n<link href=\"css/perfil.css\" rel=\"stylesheet\">\n\n\n</head>\n\n<body data-spy=\"scroll\" data-target=\".navbar\" data-offset=\"20\">\n\n\t<div class=\"container-fluid\">\n\t\t<div id=\"detalle\" class=\"container text-center\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-md-2\">\n\t\t\t\t\t<img src=\"imgs/mf-V1.jpg\" class=\"img-responsive img-circle\" alt=\"\"\n\t\t\t\t\t\twidth=\"120\" height=\"120\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-10\">\n\t\t\t\t\t<h3>AUTOR</h3>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<em>Mariana Falconí Samaniego</em>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\tMARIANA FALCONI SAMANIEGO: Poeta y Narradora Ecuatoriana, nacida\n\t\t\t\t\t\ten Riobamba. Escribe desde los 20 años en que descubrió la magia\n\t\t\t\t\t\tde la palabra, el embrujo de poder transformar frases simples en\n\t\t\t\t\t\tmetáforas y ser capaz de desnudar su alma en cada verso, en cada\n\t\t\t\t\t\tpoema y reflejar sus sueños y anhelos por un mundo mejor en las\n\t\t\t\t\t\tfantásticas historias que habitan las páginas de sus cuentos y\n\t\t\t\t\t\tnovelas.<a data-toggle=\"collapse\" data-target=\"#demo\"> Más...</a>\n\t\t\t\t\t</p>\n\n\n\t\t\t\t\t<div id=\"demo\" class=\"collapse\">\n\t\t\t\t\t\t<p>Ha publicado: 9 libros EN POESÍA: Y 40 libros EN NARRATIVA\n\t\t\t\t\t\t\tINFANTIL Y JUVENIL</p>\n\t\t\t\t\t\t<em>GALARDONES:</em>\n\t\t\t\t\t\t<p>- Premio de Poesía, CIEPE. 1990. - Mención de honor, Poesía\n\t\t\t\t\t\t\tInedita a Quito.- Municipio de Quito.-1994 - Condecoración al\n\t\t\t\t\t\t\tMérito Educativo y Cultural por el H.Consejo provincial de\n\t\t\t\t\t\t\tPichincha.-1996. - Tercer Premio, Concurso Nacional de cuento\n\t\t\t\t\t\t\tfemenino”Jorge Luis Borges”.- 1997. - Premio exhibición\n\t\t\t\t\t\t\tinternacional de “Poemas Poster”.Universidad de Santo Tomás.\n\t\t\t\t\t\t\tCanadá.-2000 - Primer Premio, Concurso Nacional de Poesía\n\t\t\t\t\t\t\t“Gabriela Mistral”.- 2001. - Mención especial 3º concurso cuento\n\t\t\t\t\t\t\tinfantil “Alicia Yánez Cossío”.-2006 - Finalista en Bienal de\n\t\t\t\t\t\t\tpoesía “El poeta y su Voz” Casa de la Cultura, núcleo de Manabí.-\n\t\t\t\t\t\t\t2006. - Condecoración al Mérito Laboral por su trabajo en el\n\t\t\t\t\t\t\tcampo cultural, Ministerio de Trabajo.- mayo 2008. - Jurado\n\t\t\t\t\t\t\tcalificador del Concurso Nacional de Festivales, organizado por\n\t\t\t\t\t\t\tel Min. Cultura 2013. Su poesía ha sido traducida al inglés y\n\t\t\t\t\t\t\tportugués y consta en antologías nacionales e internacionales. Ha\n\t\t\t\t\t\t\tviajado invitada a otros países como Mëxico, Perú, Colombia y\n\t\t\t\t\t\t\tVenezuela. Pertenece a: la Sociedad Ecuatoriana de Escritores .\n\t\t\t\t\t\t\tLa Casa del Poeta Peruano, sede Quito. La Corporación de\n\t\t\t\t\t\t\tEscritores Ecuatorianos y Latinoamericanos. Taller Cultural\n\t\t\t\t\t\t\tRETORNO GIRÁNDULA, Asociación Ecuatoriana del libro infantil y\n\t\t\t\t\t\t\tjuvenil. Ha sido Jurado en cientos de concursos intercolegiales\n\t\t\t\t\t\t\tde poesía y narrativa</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t</div>\n\t</div>\n\t<!-- barra menú -->\n\t<nav class=\"navbar navbar-inverse\" data-spy=\"affix\"\n\t\tdata-offset-top=\"197\">\n\t\t<div class=\"container-fluid\">\n\t\t\t<div class=\"navbar-header\">\n\t\t\t\t<button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"\n\t\t\t\t\tdata-target=\"#myNavbar\">\n\t\t\t\t\t<span class=\"icon-bar\"></span> <span class=\"icon-bar\"></span> <span\n\t\t\t\t\t\tclass=\"icon-bar\"></span>\n\t\t\t\t</button>\n\t\t\t\t<a class=\"navbar-brand\" href=\"#inicio\">Tu librería digital</a>\n\t\t\t</div>\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">\n\t\t\t\t\t<li><a href=\"#detalle\">AUTOR</a></li>\n\t\t\t\t\t<li><a href=\"#obras\">OBRAS</a></li>\n\t\t\t\t\t<li><a href=\"#cursos\">CURSOS</a></li>\n\t\t\t\t\t<li><a href=\"#contactos\">CONTACTOS</a></li>\n\t\t\t\t\t<li class=\"dropdown\"><a class=\"dropdown-toggle\"\n\t\t\t\t\t\tdata-toggle=\"dropdown\" href=\"#\">MAS <span class=\"caret\"></span></a>\n\t\t\t\t\t\t<ul class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<li><a href=\"#\">Merchandise</a></li>\n\t\t\t\t\t\t\t<li><a href=\"#\">Extras</a></li>\n\t\t\t\t\t\t\t<li><a href=\"#\">Media</a></li>\n\t\t\t\t\t\t</ul></li>\n\t\t\t\t\t<li><a href=\"#\"><span class=\"fas fa-search\"></span></a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</nav>\n\t<hr>\n\n\t<!-- obras -->\n\t<div id=\"obras\" class=\"bg-1\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaCuentosTerrorLat.jpg\" class=\"img-responsive\"\n\t\t\t\t\talt=\"\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Mariana Falconí Samaniego</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITORA</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaCuentosTradicionesIV.jpg\" alt=\"\"\n\t\t\t\t\tclass=\"img-responsive\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Franco Ludo</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITOR LECTOR</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaCuentosTradicionesV.jpg\"\n\t\t\t\t\tclass=\"img-responsive\" alt=\"\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Mariana Falconí Samaniego</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITORA</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaCuevaTayos.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Franco Ludo</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITOR LECTOR</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaElJardinEncantado.jpg\" class=\"img-responsive\"\n\t\t\t\t\talt=\"\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Mariana Falconí Samaniego</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITORA</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaFrontalFace2-1.jpg\" alt=\"\"\n\t\t\t\t\tclass=\"img-responsive\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Franco Ludo</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITOR LECTOR</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t</div>\n\n\t<!-- cursos -->\n\t<div id=\"cursos\" class=\"bg-1\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"container-1\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/mF-H1.jpg\" class=\"img-responsive\" alt=\"\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Mariana Falconí Samaniego</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITORA</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H2.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Franco Ludo</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR LECTOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"container-1\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H3.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Pan Daho</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H4.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Mik Walls</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<!-- Modal -->\n\t<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\n\t\t<div class=\"modal-dialog\">\n\n\t\t\t<!-- Modal content-->\n\t\t\t<div class=\"modal-content\">\n\t\t\t\t<div class=\"modal-header\">\n\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\">×</button>\n\t\t\t\t\t<h4>\n\t\t\t\t\t\t<span class=\"fa fa-lock\"></span> Tickets\n\t\t\t\t\t</h4>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-body\">\n\t\t\t\t\t<form role=\"form\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"psw\"><span class=\"fa fa-shopping-cart\"></span>\n\t\t\t\t\t\t\t\tTickets, $23 per person</label> <input type=\"number\"\n\t\t\t\t\t\t\t\tclass=\"form-control\" id=\"psw\" placeholder=\"How many?\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"usrname\"><span class=\"fa fa-user\"></span>\n\t\t\t\t\t\t\t\tSend To</label> <input type=\"text\" class=\"form-control\" id=\"usrname\"\n\t\t\t\t\t\t\t\tplaceholder=\"Enter email\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-block\">\n\t\t\t\t\t\t\tPay <span class=\"fa fa-check\"></span>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-footer\">\n\t\t\t\t\t<button type=\"submit\" class=\"btn btn-danger btn-default pull-left\"\n\t\t\t\t\t\tdata-dismiss=\"modal\">\n\t\t\t\t\t\t<span class=\"fa fa-minus-circle\"></span> Cancel\n\t\t\t\t\t</button>\n\t\t\t\t\t<p>\n\t\t\t\t\t\tNeed <a href=\"#\">help?</a>\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\n\t<!-- Container (Contact Section) -->\n\t<div id=\"contactos\" class=\"container\">\n\t\t<h3 class=\"text-center\">Contactos</h3>\n\t\t<p class=\"text-center\">\n\t\t\t<em>Nosotros amamos a nuestros fans!</em>\n\t\t</p>\n\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-4\">\n\t\t\t\t<p>Fan? Dejanos una nota.</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-map-marker\"></span>Quito, ECUADOR\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-phone\"></span>Teléfono: +00 1515151515\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-envelope\"></span>Coreeo electrónico:\n\t\t\t\t\tmail@mail.com\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-8\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-sm-6 form-group\">\n\t\t\t\t\t\t<input class=\"form-control\" id=\"name\" name=\"name\"\n\t\t\t\t\t\t\tplaceholder=\"Name\" type=\"text\" required>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-sm-6 form-group\">\n\t\t\t\t\t\t<input class=\"form-control\" id=\"email\" name=\"email\"\n\t\t\t\t\t\t\tplaceholder=\"Email\" type=\"email\" required>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<textarea class=\"form-control\" id=\"comments\" name=\"comments\"\n\t\t\t\t\tplaceholder=\"Comment\" rows=\"5\"></textarea>\n\t\t\t\t<br>\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-12 form-group\">\n\t\t\t\t\t\t<button class=\"btn pull-right\" type=\"submit\">Send</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<br>\n\t\t<h3 class=\"text-center\">En Este Blog</h3>\n\t\t<ul class=\"nav nav-tabs\">\n\t\t\t<li class=\"active\"><a data-toggle=\"tab\" href=\"#home\">Mike</a></li>\n\t\t\t<li><a data-toggle=\"tab\" href=\"#menu1\">Chandler</a></li>\n\t\t\t<li><a data-toggle=\"tab\" href=\"#menu2\">Peter</a></li>\n\t\t</ul>\n\n\t\t<div class=\"tab-content\">\n\t\t\t<div id=\"home\" class=\"tab-pane fade in active\">\n\t\t\t\t<h2>Mike Ross, Manager</h2>\n\t\t\t\t<p>Man, we've been on the road for some time now. Looking\n\t\t\t\t\tforward to lorem ipsum.</p>\n\t\t\t</div>\n\t\t\t<div id=\"menu1\" class=\"tab-pane fade\">\n\t\t\t\t<h2>Chandler Bing, Guitarist</h2>\n\t\t\t\t<p>Always a pleasure people! Hope you enjoyed it as much as I\n\t\t\t\t\tdid. Could I BE.. any more pleased?</p>\n\t\t\t</div>\n\t\t\t<div id=\"menu2\" class=\"tab-pane fade\">\n\t\t\t\t<h2>Peter Griffin, Bass player</h2>\n\t\t\t\t<p>I mean, sometimes I enjoy the show, but other times I enjoy\n\t\t\t\t\tother things.</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<!-- Image of location/map -->\n\t<img src=\"imgs/ubicacion.jpg\" class=\"img-responsive\"\n\t\tstyle=\"width: 100%\">\n\n\t<!-- Footer -->\n\t<footer class=\"text-center\">\n\t\t<a class=\"up-arrow\" href=\"#myPage\" data-toggle=\"tooltip\"\n\t\t\ttitle=\"TO TOP\"> <span class=\"fa fa-chevron-up\"></span>\n\t\t</a><br> <br>\n\t\t<p>\n\t\t\tSitio realizado por <a href=\"https://www.google.com\"\n\t\t\t\tdata-toggle=\"tooltip\" title=\"Visita le-vill consultor\">www.le-vill.com</a>\n\t\t</p>\n\t</footer>\n\n\n\t<!-- js home -->\n\t<script src=\"js/jquery.js\"></script>\n\t<script src=\"js/bootstrap.min.js\"></script>\n\t<script src=\"js/perfil.js\"></script>\n\n\n</body>\n\n</html>\n",
+			"settings":
+			{
+				"buffer_size": 10910,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html xmlns:th=\"http://www.thymeleaf.org\">\n\n<head>\n<meta charset=\"utf-8\">\n\n\n<title>SILIB-VILL</title>\n\n<!-- Custom styles for this template -->\n<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n<link href=\"css/home.css\" rel=\"stylesheet\">\n\n\n</head>\n\n<body id=\"myPage\" data-spy=\"scroll\" data-target=\".navbar\"\n\tdata-offset=\"50\">\n\n\t<nav class=\"navbar navbar-default navbar-fixed-top\">\n\t\t<div class=\"container-fluid\">\n\t\t\t<div class=\"navbar-header\">\n\t\t\t\t<button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"\n\t\t\t\t\tdata-target=\"#myNavbar\">\n\t\t\t\t\t<span class=\"icon-bar\"></span> <span class=\"icon-bar\"></span> <span\n\t\t\t\t\t\tclass=\"icon-bar\"></span>\n\t\t\t\t</button>\n\t\t\t\t<a class=\"navbar-brand\" href=\"#myPage\">Tu librería digital</a>\n\t\t\t</div>\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">\n\t\t\t\t\t<li><a href=\"#myPage\">INICIO</a></li>\n\t\t\t\t\t<li><a href=\"#site\">SITIO</a></li>\n\t\t\t\t\t<li><a href=\"#escritores\">ESCRITORES</a></li>\n\t\t\t\t\t<li><a href=\"#contact\">CONTACTOS</a></li>\n\t\t\t\t\t<li class=\"dropdown\"><a class=\"dropdown-toggle\"\n\t\t\t\t\t\tdata-toggle=\"dropdown\" href=\"#\">MAS <span class=\"caret\"></span></a>\n\t\t\t\t\t\t<ul class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<li><a href=\"#\">Merchandise</a></li>\n\t\t\t\t\t\t\t<li><a href=\"#\">Extras</a></li>\n\t\t\t\t\t\t\t<li><a href=\"#\">Media</a></li>\n\t\t\t\t\t\t</ul></li>\n\t\t\t\t\t<li><a href=\"#\"><span class=\"fas fa-search\"></span></a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</nav>\n\n\t<div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\n\t\t<!-- Indicators -->\n\t\t<ol class=\"carousel-indicators\">\n\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\n\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\n\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\n\t\t</ol>\n\n\t\t<!-- Wrapper for slides -->\n\t\t<div class=\"carousel-inner\" role=\"listbox\">\n\t\t\t<div class=\"item active\">\n\t\t\t\t<img src=\"imgs/mF-H2.jpg\" alt=\"New York\" width=\"1200\" height=\"100\">\n\t\t\t\t<div class=\"carousel-caption\">\n\t\t\t\t\t<h3>Mariana Falconí Samaniego</h3>\n\t\t\t\t\t<p>ESCRITORA</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"item\">\n\t\t\t\t<img src=\"imgs/M2.jpg\" alt=\"Chicago\" width=\"1200\" height=\"100\">\n\t\t\t\t<div class=\"carousel-caption\">\n\t\t\t\t\t<h3>Blanca Torres</h3>\n\t\t\t\t\t<p>ESCRITORA</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"item\">\n\t\t\t\t<img src=\"imgs/M3.jpg\" alt=\"Los Angeles\" width=\"1200\" height=\"100\">\n\t\t\t\t<div class=\"carousel-caption\">\n\t\t\t\t\t<h3>Marcia Town</h3>\n\t\t\t\t\t<p>ESCRITORA, LECTORA</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<!-- Left and right controls -->\n\t\t<a class=\"left carousel-control\" href=\"#myCarousel\" role=\"button\"\n\t\t\tdata-slide=\"prev\"> <span class=\"fa fa-chevron-left\"\n\t\t\taria-hidden=\"true\"></span> <span class=\"sr-only\">Anterior</span>\n\t\t</a> <a class=\"right carousel-control\" href=\"#myCarousel\" role=\"button\"\n\t\t\tdata-slide=\"next\"> <span class=\"fa fa-chevron-right\"\n\t\t\taria-hidden=\"true\"></span> <span class=\"sr-only\">Siguiente</span>\n\t\t</a>\n\t</div>\n\n\t<!-- Container (The Band Section) -->\n\n\t<div id=\"site\" class=\"container text-center\">\n\t\t<h3>LEE EN CUALQUIER MOMENTO, EN CUALQUIER LUGAR</h3>\n\t\t<p>\n\t\t\t<em>Nosotros amamos la lectura y escritura!</em>\n\t\t</p>\n\t\t<p>Nuestro proposito es exponer nuestras obras a nuestra comunidad\n\t\t\tde lectores que disfrutan de un buen libro de escritores ecuatorianos\n\t\t\texpertos y principiantes que necesitan el espacio para dar a conocer\n\t\t\tsu talento!</p>\n\t\t<br>\n\t</div>\n\n\t<!-- escritores -->\n\t<div id=\"escritores\" class=\"bg-1\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"container-1\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/mF-H1.jpg\" class=\"img-responsive\" alt=\"\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Mariana Falconí Samaniego</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITORA</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H2.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Franco Ludo</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR LECTOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"container-1\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H3.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Pan Daho</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H4.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Mik Walls</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<!-- Modal -->\n\t<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\n\t\t<div class=\"modal-dialog\">\n\n\t\t\t<!-- Modal content-->\n\t\t\t<div class=\"modal-content\">\n\t\t\t\t<div class=\"modal-header\">\n\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\">×</button>\n\t\t\t\t\t<h4>\n\t\t\t\t\t\t<span class=\"fa fa-lock\"></span> Tickets\n\t\t\t\t\t</h4>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-body\">\n\t\t\t\t\t<form role=\"form\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"psw\"><span class=\"fa fa-shopping-cart\"></span>\n\t\t\t\t\t\t\t\tTickets, $23 per person</label> <input type=\"number\"\n\t\t\t\t\t\t\t\tclass=\"form-control\" id=\"psw\" placeholder=\"How many?\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"usrname\"><span class=\"fa fa-user\"></span>\n\t\t\t\t\t\t\t\tSend To</label> <input type=\"text\" class=\"form-control\" id=\"usrname\"\n\t\t\t\t\t\t\t\tplaceholder=\"Enter email\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-block\">\n\t\t\t\t\t\t\tPay <span class=\"fa fa-check\"></span>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-footer\">\n\t\t\t\t\t<button type=\"submit\" class=\"btn btn-danger btn-default pull-left\"\n\t\t\t\t\t\tdata-dismiss=\"modal\">\n\t\t\t\t\t\t<span class=\"fa fa-minus-circle\"></span> Cancel\n\t\t\t\t\t</button>\n\t\t\t\t\t<p>\n\t\t\t\t\t\tNeed <a href=\"#\">help?</a>\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\n\t<!-- Container (Contact Section) -->\n\t<div id=\"contact\" class=\"container\">\n\t\t<h3 class=\"text-center\">Contactos</h3>\n\t\t<p class=\"text-center\">\n\t\t\t<em>Nosotros amamos a nuestros fans!</em>\n\t\t</p>\n\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-4\">\n\t\t\t\t<p>Fan? Dejanos una nota.</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-map-marker\"></span>Quito, ECUADOR\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-phone\"></span>Teléfono: +00 1515151515\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-envelope\"></span>Coreeo electrónico:\n\t\t\t\t\tmail@mail.com\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-8\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-sm-6 form-group\">\n\t\t\t\t\t\t<input class=\"form-control\" id=\"name\" name=\"name\"\n\t\t\t\t\t\t\tplaceholder=\"Name\" type=\"text\" required>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-sm-6 form-group\">\n\t\t\t\t\t\t<input class=\"form-control\" id=\"email\" name=\"email\"\n\t\t\t\t\t\t\tplaceholder=\"Email\" type=\"email\" required>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<textarea class=\"form-control\" id=\"comments\" name=\"comments\"\n\t\t\t\t\tplaceholder=\"Comment\" rows=\"5\"></textarea>\n\t\t\t\t<br>\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-12 form-group\">\n\t\t\t\t\t\t<button class=\"btn pull-right\" type=\"submit\">Send</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<br>\n\t\t<h3 class=\"text-center\">En Este Blog</h3>\n\t\t<ul class=\"nav nav-tabs\">\n\t\t\t<li class=\"active\"><a data-toggle=\"tab\" href=\"#home\">Mike</a></li>\n\t\t\t<li><a data-toggle=\"tab\" href=\"#menu1\">Chandler</a></li>\n\t\t\t<li><a data-toggle=\"tab\" href=\"#menu2\">Peter</a></li>\n\t\t</ul>\n\n\t\t<div class=\"tab-content\">\n\t\t\t<div id=\"home\" class=\"tab-pane fade in active\">\n\t\t\t\t<h2>Mike Ross, Manager</h2>\n\t\t\t\t<p>Man, we've been on the road for some time now. Looking\n\t\t\t\t\tforward to lorem ipsum.</p>\n\t\t\t</div>\n\t\t\t<div id=\"menu1\" class=\"tab-pane fade\">\n\t\t\t\t<h2>Chandler Bing, Guitarist</h2>\n\t\t\t\t<p>Always a pleasure people! Hope you enjoyed it as much as I\n\t\t\t\t\tdid. Could I BE.. any more pleased?</p>\n\t\t\t</div>\n\t\t\t<div id=\"menu2\" class=\"tab-pane fade\">\n\t\t\t\t<h2>Peter Griffin, Bass player</h2>\n\t\t\t\t<p>I mean, sometimes I enjoy the show, but other times I enjoy\n\t\t\t\t\tother things.</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<!-- Image of location/map -->\n\t<img src=\"imgs/ubicacion.jpg\" class=\"img-responsive\"\n\t\tstyle=\"width: 100%\">\n\n\t<!-- Footer -->\n\t<footer class=\"text-center\">\n\t\t<a class=\"up-arrow\" href=\"#myPage\" data-toggle=\"tooltip\"\n\t\t\ttitle=\"TO TOP\"> <span class=\"fa fa-chevron-up\"></span>\n\t\t</a><br> <br>\n\t\t<p>\n\t\t\tSitio realizado por <a href=\"https://www.google.com\"\n\t\t\t\tdata-toggle=\"tooltip\" title=\"Visita le-vill consultor\">www.le-vill.com</a>\n\t\t</p>\n\t</footer>\n\n\n\t<!-- js home -->\n\t<script src=\"js/jquery.js\"></script>\n\t<script src=\"js/bootstrap.min.js\"></script>\n\t<script src=\"js/home.js\"></script>\n\n</body>\n\n</html>\n",
+			"settings":
+			{
+				"buffer_size": 8585,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!doctype html>\n<!--\n    Programado por Luis Cabrera Benito\n  ____          _____               _ _           _\n |  _ \\        |  __ \\             (_) |         | |\n | |_) |_   _  | |__) |_ _ _ __ _____| |__  _   _| |_ ___\n |  _ <| | | | |  ___/ _` | '__|_  / | '_ \\| | | | __/ _ \\\n | |_) | |_| | | |  | (_| | |   / /| | |_) | |_| | ||  __/\n |____/ \\__, | |_|   \\__,_|_|  /___|_|_.__/ \\__, |\\__\\___|\n         __/ |                               __/ |\n        |___/                               |___/\n\n\n    Blog:       https://parzibyte.me/blog\n    Ayuda:      https://parzibyte.me/blog/contrataciones-ayuda/\n    Contacto:   https://parzibyte.me/blog/contacto/\n-->\n<html lang=\"es\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n<head th:replace=\"layouts/encabezado :: encabezado\"></head>\n<body>\n<nav th:replace=\"layouts/navbar :: navbar\"></nav>\n<main layout:fragment=\"contenido\" role=\"main\" class=\"container\"></main>\n<footer th:replace=\"layouts/pie :: pie\"></footer>\n</body>\n</html>",
+			"file": "/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.5362/sistema-ventas-spring-boot-master/src/main/resources/templates/master.html",
+			"file_size": 976,
+			"file_write_time": 132296557520000000,
+			"settings":
+			{
+				"buffer_size": 976,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"es\" xmlns:th=\"http://www.thymeleaf.org\"\n      xmlns:layout=\"http://www.ultraq.net.nz/thymeleaf/layout\"\n      layout:decorate=\"master\">\n<body>\n<main layout:fragment=\"contenido\">\n    <div class=\"col-12\">\n        <h2>Productos</h2>\n        <div th:classappend=\"'alert-' + (${clase != null} ? ${clase} : info)\" th:if=\"${mensaje != null}\"\n             th:text=\"${mensaje}\"\n             class=\"alert\">\n        </div>\n        <a class=\"btn btn-success mb-2\" th:href=\"@{/productos/agregar}\">Agregar</a>\n        <div class=\"table-responsive\">\n            <table class=\"table table-bordered\">\n                <thead>\n                <tr>\n                    <th>Nombre</th>\n                    <th>Código</th>\n                    <th>Precio</th>\n                    <th>Existencia</th>\n                    <th>Editar</th>\n                    <th>Eliminar</th>\n                </tr>\n                </thead>\n                <tbody>\n                <tr th:each=\"producto : ${productos}\">\n                    <td th:text=\"${producto.nombre}\"></td>\n                    <td th:text=\"${producto.codigo}\"></td>\n                    <td th:text=\"${producto.precio}\"></td>\n                    <td th:text=\"${producto.existencia}\"></td>\n                    <td>\n                        <a class=\"btn btn-warning\" th:href=\"@{/productos/editar/} + ${producto.id}\">Editar <i\n                                class=\"fa fa-edit\"></i></a>\n                    </td>\n                    <td>\n                        <form th:action=\"@{/productos/eliminar}\" method=\"post\">\n                            <input type=\"hidden\" name=\"id\" th:value=\"${producto.id}\"/>\n                            <button type=\"submit\" class=\"btn btn-danger\">Eliminar <i class=\"fa fa-trash\"></i>\n                            </button>\n                        </form>\n                    </td>\n                </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</main>\n</body>\n</html>\n\n\nservicio de entrega a domicilio\n\nSi deseas alguna de mis obras contactarte al whatsapp 0995003896",
+			"file": "/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.14486/sistema-ventas-spring-boot-master/src/main/resources/templates/productos/ver_productos.html",
+			"file_size": 1981,
+			"file_write_time": 132296557520000000,
+			"settings":
+			{
+				"buffer_size": 2080,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 558,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Stalin/Downloads/index.html",
+			"settings":
+			{
+				"buffer_size": 1864,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Stalin/git/SILIB-MEANstack"
+	],
+	"file_history":
+	[
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa3548.4967/ProductosController.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa3548.47937/ProductoParaVender.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa3548.44598/Producto.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa3548.43206/Application.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.742/sistema-ventas-spring-boot-master/src/main/resources/templates/ventas/ver_ventas.html",
+		"/C/Users/Stalin/git/SILIB-VILL/SILIB-VILL/src/main/resources/static/css/style.css",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa17264.46785/ServicioComputerVisionImpl.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa17264.30285/ServiciosController.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.13366/InstrumentController.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.48980/LvSingerServiceApplication.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.31580/LvIntrumentServiceApplication.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.44302/LvIntrumentServiceApplication.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.28477/Servicios.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.41597/Crear.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.24894/LvClientWebApplication.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.10066/Servicios.java",
+		"/C/Users/Stalin/git/SILIB-VILL/SILIB-VILL/src/main/resources/static/css/bootstrap.min.css",
+		"/C/Users/Stalin/Downloads/css/bootstrap.css",
+		"/C/Users/Stalin/Downloads/css/bootstrap.min.css",
+		"/C/Users/Stalin/Desktop/index.html",
+		"/C/Users/Stalin/Desktop/jquery.js",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.7893/LvZuulServerApplication.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.44812/LvConfigServerApplication.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.37810/ListaIns.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.35132/CrearIns.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.37474/Lista.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.28190/Crear.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.8767/Instrument.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.7062/Album.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.4847/AbstractEntity.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.43159/SingerServiceImpl.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.41516/AlbumServiceImpl.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.39089/InstrumentServiceImpl.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.38171/AlbumService.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.37548/CRUD.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.37128/InstrumentService.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.36655/SingerService.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.31045/AlbumRepository.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.30626/SingerRepository.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.30189/InstrumentRepository.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.28414/Album.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.26608/Instrument.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.12584/SingerController.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.44023/SingerController.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.39909/InstrumentoListener.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.4094/LvEurekaServerApplication.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.9141/SingerServiceImpl.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.12133/Album.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.22143/Instrument.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.44330/Singer.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.46706/SingerRepository.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.16969/CRUD.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.14745/SingerService.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.37920/SingerRepository.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.13227/SingerService.java",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa2236.12201/CRUD.java",
+		"/C/tesis/Felipe/bootStrap/bootstrap-4.4.1/site/docs/4.4/examples/sign-in/index.html",
+		"/C/tesis/Felipe/bootStrap/bootstrap-4.4.1/site/docs/4.4/examples/dashboard/index.html",
+		"/C/tesis/vistas/startbootstrap-sb-admin-gh-pages/vendor/bootstrap/css/bootstrap.min.css",
+		"/C/tesis/vistas/startbootstrap-sb-admin-gh-pages/vendor/bootstrap/css/bootstrap.css",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/pages/home/home.ts",
+		"/C/proyectos CV/MyResume/index.html",
+		"/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/resources/static/vendor/bootstrap/css/bootstrap.css",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/services/auth.service.ts",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/pages/home/home.html",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/services/domain/categoria.service.ts",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/pages/categorias/categorias.html",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/pages/categorias/categorias.ts",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/app/app.module.ts",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/models/categoria.dto.ts",
+		"/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/java/ec/com/siga/service/impl/UserServiceImpl.java",
+		"/C/Users/Stalin/Downloads/lista25 (2).m3u",
+		"/C/tesis/vistas/gs-uploading-files-master/complete/src/main/java/hello/FileUploadController.java",
+		"/C/tesis/vistas/gs-uploading-files-master/complete/src/main/resources/templates/uploadForm.html",
+		"/C/tesis/vistas/gs-uploading-files-master/complete/src/main/resources/application.properties",
+		"/C/tesis/vistas/SpringBoot-MVC-JPA-CRUD-2-master/src/main/java/com/cristianruiz/Controllers/UsuarioController.java",
+		"/C/tesis/vistas/SpringBoot-MVC-JPA-CRUD-2-master/src/main/resources/templates/index.html",
+		"/C/tesis/vistas/material-dashboard-html-v2.1.1/examples/user.html",
+		"/D/wifi",
+		"/C/Users/Stalin/Desktop/Dump20190904.sql",
+		"/C/Users/Stalin/Downloads/lista25.m3u",
+		"/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/resources/application.properties",
+		"/C/Users/Stalin/Downloads/importantisimo",
+		"/C/tesis/documentos/manuales/3. Programas Fuentes/SIGA-UCE/src/main/resources/application.properties",
+		"/C/Users/Stalin/Desktop/Dump20190903.sql",
+		"/C/Users/Stalin/git/Autenticacion/Autenticacion/src/main/resources/static/css/bootstrap.css",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DRa6848.27363/bootstrap-4.3.1/site/docs/4.3/examples/sign-in/index.html",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DRa6848.29828/bootstrap-4.3.1/site/docs/4.3/examples/dashboard/index.html",
+		"/C/Users/Stalin/git/Autenticacion/Autenticacion/src/main/resources/static/vendor/fontawesome-free/css/all.css",
+		"/C/tesis/documentos/Public DNS (IPv4) AWS",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DRa3836.30981/bootstrap-4.0.0/docs/4.0/examples/product/index.html",
+		"/C/proyectosPostGrado/MyResume/index.html",
+		"/C/proyectosPostGrado/MyResume/css/bootstrap.min.css",
+		"/C/Users/Stalin/git/Autenticacion/Autenticacion/src/main/resources/static/vendor/fontawesome-free/css/all.min.css",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DRa6848.9997/bootstrap-4.3.1/site/docs/4.3/examples/dashboard/index.html",
+		"/C/Users/Stalin/git/LENIN-VILLAGRAN-RESUME/index.html.txt",
+		"/C/Users/Stalin/git/LENIN-VILLAGRAN-RESUME/README.md",
+		"/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/build.gradle",
+		"/C/Users/Stalin/git/WS-IONIC/SIGA-UCE-MOVIL/config.xml",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/services/domain/cliente.service.ts",
+		"/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/resources/templates/login.html",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/services/domain/pedido.service.ts",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/services/domain/cart.service.ts",
+		"/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/resources/templates/home.html",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/pages/produtos/produtos.html",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/services/image-util.service.ts",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/app/app.component.ts",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/pages/produto-detail/produto-detail.html",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/pages/signup/signup.html",
+		"/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/resources/static/css/bootstrap.min.css",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/models/credenciais.dto.ts",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/config/api.config.ts",
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/models/produto.dto.ts",
+		"/C/Users/Stalin/git/WS-IONIC/SIGA-UCE-MOVIL/src/models/credenciais.dto.ts",
+		"/C/apache-tomcat-8.5.0/bin/conf/tomcat-users.xml",
+		"/C/apache-tomcat-8.5.0/conf/tomcat-users.xml",
+		"/C/apache-tomcat-8.5.0/conf/tomcat-users.xsd",
+		"/C/tesis/vistas/spring-boot-pagination-bootstrap-ajax-master/src/main/resources/templates/index.html",
+		"/C/tesis/vistas/spring-boot-pagination-bootstrap-ajax-master/src/main/resources/static/js/main.js",
+		"/C/tesis/vistas/spring-boot-pagination-bootstrap-ajax-master/src/main/java/org/trahim/spring/boot/controllers/CountryController.java",
+		"/C/tesis/vistas/EJEMPLO90/ejemplo90/src/Visual/Visual.java",
+		"/C/tesis/vistas/spring-boot-pagination-bootstrap-ajax-master/src/main/java/org/trahim/spring/boot/service/CountryServiceImpl.java",
+		"/C/tesis/vistas/startbootstrap-sb-admin-gh-pages/tables.html",
+		"/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/resources/static/vendor/fontawesome-free/css/all.css",
+		"/C/tesis/vistas/EJEMPLO90/ejemplo90/src/VO/ProductoVO.java",
+		"/C/tesis/vistas/spring-boot-pagination-bootstrap-ajax-master/src/main/java/org/trahim/spring/boot/repositories/CountryRepository.java",
+		"/C/tesis/vistas/SpringBoot-MVC-JPA-CRUD-2-master/src/main/java/com/cristianruiz/entity/Usuario.java",
+		"/C/tesis/vistas/SpringBoot-MVC-JPA-CRUD-2-master/src/main/java/com/cristianruiz/entity/Configuracion.java"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"carousel",
+			"carousel-example-multi",
+			"next",
+			"nav-",
+			"nav-previous",
+			"wizard",
+			"body",
+			"plus",
+			"img",
+			"img-responsive",
+			"img",
+			"list",
+			".modal{",
+			".modal{overflow",
+			".modal{overflow:visible;}",
+			".modal",
+			".modal { overflow: visible; }",
+			".modal { overflow: visible;",
+			".modal { overflow: visible; }",
+			"changeState",
+			"hand"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 18,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 928,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								696,
+								482
+							]
+						],
+						"settings":
+						{
+							"auto_name": "/*$.post(\"nextQuestionPost\"",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 719,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								151,
+								716
+							]
+						],
+						"settings":
+						{
+							"auto_name": "@GetMapping(\"/checklogin\")",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/resources/static/js/dashboardAdmin.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 55,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								54
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<nav class=\"navbar\" style=\"background-color: #00a1",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								160,
+								160
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1225,
+								1275
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<!-- Cuestionarios -->",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 391,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								391,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "@Override",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "kemishjamesson",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 637,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								637,
+								637
+							]
+						],
+						"settings":
+						{
+							"auto_name": "ionic cordova build android --release --prod",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4783,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								32
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Battlefield 5 [Full] [Español]",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 620,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23,
+								45
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Unravel 2",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 191,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								43
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Cuphead",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1675,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								912,
+								896
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								761,
+								843
+							]
+						],
+						"settings":
+						{
+							"auto_name": "http://juegos.hopepaste.download/?v=843",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10910,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4209,
+								4130
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2911,
+								1444
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.5362/sistema-ventas-spring-boot-master/src/main/resources/templates/master.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								976,
+								976
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.14486/sistema-ventas-spring-boot-master/src/main/resources/templates/productos/ver_productos.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2080,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2080,
+								2016
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 558,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "/C/Users/Stalin/Downloads/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								209,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "proyecto-silib.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 214.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
