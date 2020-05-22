@@ -7,4 +7,4 @@ var GenderSchema = Schema({
 	gender_name: String
 });
 
-module.exports = mongoose.model('Gender' GenderSchema);
+module.exports = mongoose.model('Gender', GenderSchema);

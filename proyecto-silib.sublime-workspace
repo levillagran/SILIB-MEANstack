@@ -3,6 +3,94 @@
 	{
 		"selected_items":
 		[
+			[
+				"user",
+				"userId〔variable〕"
+			],
+			[
+				"find",
+				"findByIdAndUpdate"
+			],
+			[
+				"file",
+				"file_split"
+			],
+			[
+				"file_",
+				"file_path"
+			],
+			[
+				"md",
+				"md_upload"
+			],
+			[
+				"upl",
+				"uploadImage"
+			],
+			[
+				"u",
+				"updateUser"
+			],
+			[
+				"use",
+				"userUpdated"
+			],
+			[
+				"au",
+				"authorization"
+			],
+			[
+				"hea",
+				"headers"
+			],
+			[
+				"if",
+				"if\tif"
+			],
+			[
+				"j",
+				"jwt"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"ife",
+				"ife\tif … else"
+			],
+			[
+				"br",
+				"bcrypt"
+			],
+			[
+				"su",
+				"surname"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"i",
+				"ife\tif … else"
+			],
+			[
+				"ge",
+				"get\t.get()"
+			],
+			[
+				"f",
+				"fun\tFunction"
+			],
+			[
+				"S",
+				"Schema"
+			],
+			[
+				"body",
+				"bodyParser"
+			]
 		]
 	},
 	"buffers":
@@ -131,57 +219,32 @@
 			}
 		},
 		{
-			"contents": "<!DOCTYPE html>\n<html xmlns:th=\"http://www.thymeleaf.org\">\n\n<head>\n<meta charset=\"utf-8\">\n\n\n<title>Perfil</title>\n\n<!-- Custom styles for this template -->\n<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n<link href=\"css/perfil.css\" rel=\"stylesheet\">\n\n\n</head>\n\n<body data-spy=\"scroll\" data-target=\".navbar\" data-offset=\"20\">\n\n\t<div class=\"container-fluid\">\n\t\t<div id=\"detalle\" class=\"container text-center\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-md-2\">\n\t\t\t\t\t<img src=\"imgs/mf-V1.jpg\" class=\"img-responsive img-circle\" alt=\"\"\n\t\t\t\t\t\twidth=\"120\" height=\"120\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-10\">\n\t\t\t\t\t<h3>AUTOR</h3>\n\t\t\t\t\t<p>\n\t\t\t\t\t\t<em>Mariana Falconí Samaniego</em>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>\n\t\t\t\t\t\tMARIANA FALCONI SAMANIEGO: Poeta y Narradora Ecuatoriana, nacida\n\t\t\t\t\t\ten Riobamba. Escribe desde los 20 años en que descubrió la magia\n\t\t\t\t\t\tde la palabra, el embrujo de poder transformar frases simples en\n\t\t\t\t\t\tmetáforas y ser capaz de desnudar su alma en cada verso, en cada\n\t\t\t\t\t\tpoema y reflejar sus sueños y anhelos por un mundo mejor en las\n\t\t\t\t\t\tfantásticas historias que habitan las páginas de sus cuentos y\n\t\t\t\t\t\tnovelas.<a data-toggle=\"collapse\" data-target=\"#demo\"> Más...</a>\n\t\t\t\t\t</p>\n\n\n\t\t\t\t\t<div id=\"demo\" class=\"collapse\">\n\t\t\t\t\t\t<p>Ha publicado: 9 libros EN POESÍA: Y 40 libros EN NARRATIVA\n\t\t\t\t\t\t\tINFANTIL Y JUVENIL</p>\n\t\t\t\t\t\t<em>GALARDONES:</em>\n\t\t\t\t\t\t<p>- Premio de Poesía, CIEPE. 1990. - Mención de honor, Poesía\n\t\t\t\t\t\t\tInedita a Quito.- Municipio de Quito.-1994 - Condecoración al\n\t\t\t\t\t\t\tMérito Educativo y Cultural por el H.Consejo provincial de\n\t\t\t\t\t\t\tPichincha.-1996. - Tercer Premio, Concurso Nacional de cuento\n\t\t\t\t\t\t\tfemenino”Jorge Luis Borges”.- 1997. - Premio exhibición\n\t\t\t\t\t\t\tinternacional de “Poemas Poster”.Universidad de Santo Tomás.\n\t\t\t\t\t\t\tCanadá.-2000 - Primer Premio, Concurso Nacional de Poesía\n\t\t\t\t\t\t\t“Gabriela Mistral”.- 2001. - Mención especial 3º concurso cuento\n\t\t\t\t\t\t\tinfantil “Alicia Yánez Cossío”.-2006 - Finalista en Bienal de\n\t\t\t\t\t\t\tpoesía “El poeta y su Voz” Casa de la Cultura, núcleo de Manabí.-\n\t\t\t\t\t\t\t2006. - Condecoración al Mérito Laboral por su trabajo en el\n\t\t\t\t\t\t\tcampo cultural, Ministerio de Trabajo.- mayo 2008. - Jurado\n\t\t\t\t\t\t\tcalificador del Concurso Nacional de Festivales, organizado por\n\t\t\t\t\t\t\tel Min. Cultura 2013. Su poesía ha sido traducida al inglés y\n\t\t\t\t\t\t\tportugués y consta en antologías nacionales e internacionales. Ha\n\t\t\t\t\t\t\tviajado invitada a otros países como Mëxico, Perú, Colombia y\n\t\t\t\t\t\t\tVenezuela. Pertenece a: la Sociedad Ecuatoriana de Escritores .\n\t\t\t\t\t\t\tLa Casa del Poeta Peruano, sede Quito. La Corporación de\n\t\t\t\t\t\t\tEscritores Ecuatorianos y Latinoamericanos. Taller Cultural\n\t\t\t\t\t\t\tRETORNO GIRÁNDULA, Asociación Ecuatoriana del libro infantil y\n\t\t\t\t\t\t\tjuvenil. Ha sido Jurado en cientos de concursos intercolegiales\n\t\t\t\t\t\t\tde poesía y narrativa</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t</div>\n\t</div>\n\t<!-- barra menú -->\n\t<nav class=\"navbar navbar-inverse\" data-spy=\"affix\"\n\t\tdata-offset-top=\"197\">\n\t\t<div class=\"container-fluid\">\n\t\t\t<div class=\"navbar-header\">\n\t\t\t\t<button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"\n\t\t\t\t\tdata-target=\"#myNavbar\">\n\t\t\t\t\t<span class=\"icon-bar\"></span> <span class=\"icon-bar\"></span> <span\n\t\t\t\t\t\tclass=\"icon-bar\"></span>\n\t\t\t\t</button>\n\t\t\t\t<a class=\"navbar-brand\" href=\"#inicio\">Tu librería digital</a>\n\t\t\t</div>\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">\n\t\t\t\t\t<li><a href=\"#detalle\">AUTOR</a></li>\n\t\t\t\t\t<li><a href=\"#obras\">OBRAS</a></li>\n\t\t\t\t\t<li><a href=\"#cursos\">CURSOS</a></li>\n\t\t\t\t\t<li><a href=\"#contactos\">CONTACTOS</a></li>\n\t\t\t\t\t<li class=\"dropdown\"><a class=\"dropdown-toggle\"\n\t\t\t\t\t\tdata-toggle=\"dropdown\" href=\"#\">MAS <span class=\"caret\"></span></a>\n\t\t\t\t\t\t<ul class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<li><a href=\"#\">Merchandise</a></li>\n\t\t\t\t\t\t\t<li><a href=\"#\">Extras</a></li>\n\t\t\t\t\t\t\t<li><a href=\"#\">Media</a></li>\n\t\t\t\t\t\t</ul></li>\n\t\t\t\t\t<li><a href=\"#\"><span class=\"fas fa-search\"></span></a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</nav>\n\t<hr>\n\n\t<!-- obras -->\n\t<div id=\"obras\" class=\"bg-1\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaCuentosTerrorLat.jpg\" class=\"img-responsive\"\n\t\t\t\t\talt=\"\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Mariana Falconí Samaniego</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITORA</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaCuentosTradicionesIV.jpg\" alt=\"\"\n\t\t\t\t\tclass=\"img-responsive\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Franco Ludo</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITOR LECTOR</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaCuentosTradicionesV.jpg\"\n\t\t\t\t\tclass=\"img-responsive\" alt=\"\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Mariana Falconí Samaniego</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITORA</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaCuevaTayos.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Franco Ludo</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITOR LECTOR</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaElJardinEncantado.jpg\" class=\"img-responsive\"\n\t\t\t\t\talt=\"\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Mariana Falconí Samaniego</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITORA</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-3\">\n\t\t\t\t<img src=\"imgs/portadaFrontalFace2-1.jpg\" alt=\"\"\n\t\t\t\t\tclass=\"img-responsive\">\n\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t<strong>Franco Ludo</strong>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t<h3>ESCRITOR LECTOR</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t</div>\n\n\t<!-- cursos -->\n\t<div id=\"cursos\" class=\"bg-1\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"container-1\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/mF-H1.jpg\" class=\"img-responsive\" alt=\"\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Mariana Falconí Samaniego</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITORA</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H2.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Franco Ludo</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR LECTOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"container-1\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H3.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Pan Daho</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H4.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Mik Walls</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<!-- Modal -->\n\t<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\n\t\t<div class=\"modal-dialog\">\n\n\t\t\t<!-- Modal content-->\n\t\t\t<div class=\"modal-content\">\n\t\t\t\t<div class=\"modal-header\">\n\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\">×</button>\n\t\t\t\t\t<h4>\n\t\t\t\t\t\t<span class=\"fa fa-lock\"></span> Tickets\n\t\t\t\t\t</h4>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-body\">\n\t\t\t\t\t<form role=\"form\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"psw\"><span class=\"fa fa-shopping-cart\"></span>\n\t\t\t\t\t\t\t\tTickets, $23 per person</label> <input type=\"number\"\n\t\t\t\t\t\t\t\tclass=\"form-control\" id=\"psw\" placeholder=\"How many?\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"usrname\"><span class=\"fa fa-user\"></span>\n\t\t\t\t\t\t\t\tSend To</label> <input type=\"text\" class=\"form-control\" id=\"usrname\"\n\t\t\t\t\t\t\t\tplaceholder=\"Enter email\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-block\">\n\t\t\t\t\t\t\tPay <span class=\"fa fa-check\"></span>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-footer\">\n\t\t\t\t\t<button type=\"submit\" class=\"btn btn-danger btn-default pull-left\"\n\t\t\t\t\t\tdata-dismiss=\"modal\">\n\t\t\t\t\t\t<span class=\"fa fa-minus-circle\"></span> Cancel\n\t\t\t\t\t</button>\n\t\t\t\t\t<p>\n\t\t\t\t\t\tNeed <a href=\"#\">help?</a>\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\n\t<!-- Container (Contact Section) -->\n\t<div id=\"contactos\" class=\"container\">\n\t\t<h3 class=\"text-center\">Contactos</h3>\n\t\t<p class=\"text-center\">\n\t\t\t<em>Nosotros amamos a nuestros fans!</em>\n\t\t</p>\n\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-4\">\n\t\t\t\t<p>Fan? Dejanos una nota.</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-map-marker\"></span>Quito, ECUADOR\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-phone\"></span>Teléfono: +00 1515151515\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-envelope\"></span>Coreeo electrónico:\n\t\t\t\t\tmail@mail.com\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-8\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-sm-6 form-group\">\n\t\t\t\t\t\t<input class=\"form-control\" id=\"name\" name=\"name\"\n\t\t\t\t\t\t\tplaceholder=\"Name\" type=\"text\" required>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-sm-6 form-group\">\n\t\t\t\t\t\t<input class=\"form-control\" id=\"email\" name=\"email\"\n\t\t\t\t\t\t\tplaceholder=\"Email\" type=\"email\" required>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<textarea class=\"form-control\" id=\"comments\" name=\"comments\"\n\t\t\t\t\tplaceholder=\"Comment\" rows=\"5\"></textarea>\n\t\t\t\t<br>\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-12 form-group\">\n\t\t\t\t\t\t<button class=\"btn pull-right\" type=\"submit\">Send</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<br>\n\t\t<h3 class=\"text-center\">En Este Blog</h3>\n\t\t<ul class=\"nav nav-tabs\">\n\t\t\t<li class=\"active\"><a data-toggle=\"tab\" href=\"#home\">Mike</a></li>\n\t\t\t<li><a data-toggle=\"tab\" href=\"#menu1\">Chandler</a></li>\n\t\t\t<li><a data-toggle=\"tab\" href=\"#menu2\">Peter</a></li>\n\t\t</ul>\n\n\t\t<div class=\"tab-content\">\n\t\t\t<div id=\"home\" class=\"tab-pane fade in active\">\n\t\t\t\t<h2>Mike Ross, Manager</h2>\n\t\t\t\t<p>Man, we've been on the road for some time now. Looking\n\t\t\t\t\tforward to lorem ipsum.</p>\n\t\t\t</div>\n\t\t\t<div id=\"menu1\" class=\"tab-pane fade\">\n\t\t\t\t<h2>Chandler Bing, Guitarist</h2>\n\t\t\t\t<p>Always a pleasure people! Hope you enjoyed it as much as I\n\t\t\t\t\tdid. Could I BE.. any more pleased?</p>\n\t\t\t</div>\n\t\t\t<div id=\"menu2\" class=\"tab-pane fade\">\n\t\t\t\t<h2>Peter Griffin, Bass player</h2>\n\t\t\t\t<p>I mean, sometimes I enjoy the show, but other times I enjoy\n\t\t\t\t\tother things.</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<!-- Image of location/map -->\n\t<img src=\"imgs/ubicacion.jpg\" class=\"img-responsive\"\n\t\tstyle=\"width: 100%\">\n\n\t<!-- Footer -->\n\t<footer class=\"text-center\">\n\t\t<a class=\"up-arrow\" href=\"#myPage\" data-toggle=\"tooltip\"\n\t\t\ttitle=\"TO TOP\"> <span class=\"fa fa-chevron-up\"></span>\n\t\t</a><br> <br>\n\t\t<p>\n\t\t\tSitio realizado por <a href=\"https://www.google.com\"\n\t\t\t\tdata-toggle=\"tooltip\" title=\"Visita le-vill consultor\">www.le-vill.com</a>\n\t\t</p>\n\t</footer>\n\n\n\t<!-- js home -->\n\t<script src=\"js/jquery.js\"></script>\n\t<script src=\"js/bootstrap.min.js\"></script>\n\t<script src=\"js/perfil.js\"></script>\n\n\n</body>\n\n</html>\n",
+			"file": "routes/user.js",
 			"settings":
 			{
-				"buffer_size": 10910,
+				"buffer_size": 582,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<!DOCTYPE html>\n<html xmlns:th=\"http://www.thymeleaf.org\">\n\n<head>\n<meta charset=\"utf-8\">\n\n\n<title>SILIB-VILL</title>\n\n<!-- Custom styles for this template -->\n<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n<link href=\"css/home.css\" rel=\"stylesheet\">\n\n\n</head>\n\n<body id=\"myPage\" data-spy=\"scroll\" data-target=\".navbar\"\n\tdata-offset=\"50\">\n\n\t<nav class=\"navbar navbar-default navbar-fixed-top\">\n\t\t<div class=\"container-fluid\">\n\t\t\t<div class=\"navbar-header\">\n\t\t\t\t<button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"\n\t\t\t\t\tdata-target=\"#myNavbar\">\n\t\t\t\t\t<span class=\"icon-bar\"></span> <span class=\"icon-bar\"></span> <span\n\t\t\t\t\t\tclass=\"icon-bar\"></span>\n\t\t\t\t</button>\n\t\t\t\t<a class=\"navbar-brand\" href=\"#myPage\">Tu librería digital</a>\n\t\t\t</div>\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">\n\t\t\t\t\t<li><a href=\"#myPage\">INICIO</a></li>\n\t\t\t\t\t<li><a href=\"#site\">SITIO</a></li>\n\t\t\t\t\t<li><a href=\"#escritores\">ESCRITORES</a></li>\n\t\t\t\t\t<li><a href=\"#contact\">CONTACTOS</a></li>\n\t\t\t\t\t<li class=\"dropdown\"><a class=\"dropdown-toggle\"\n\t\t\t\t\t\tdata-toggle=\"dropdown\" href=\"#\">MAS <span class=\"caret\"></span></a>\n\t\t\t\t\t\t<ul class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<li><a href=\"#\">Merchandise</a></li>\n\t\t\t\t\t\t\t<li><a href=\"#\">Extras</a></li>\n\t\t\t\t\t\t\t<li><a href=\"#\">Media</a></li>\n\t\t\t\t\t\t</ul></li>\n\t\t\t\t\t<li><a href=\"#\"><span class=\"fas fa-search\"></span></a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</nav>\n\n\t<div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\n\t\t<!-- Indicators -->\n\t\t<ol class=\"carousel-indicators\">\n\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\n\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\n\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\n\t\t</ol>\n\n\t\t<!-- Wrapper for slides -->\n\t\t<div class=\"carousel-inner\" role=\"listbox\">\n\t\t\t<div class=\"item active\">\n\t\t\t\t<img src=\"imgs/mF-H2.jpg\" alt=\"New York\" width=\"1200\" height=\"100\">\n\t\t\t\t<div class=\"carousel-caption\">\n\t\t\t\t\t<h3>Mariana Falconí Samaniego</h3>\n\t\t\t\t\t<p>ESCRITORA</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"item\">\n\t\t\t\t<img src=\"imgs/M2.jpg\" alt=\"Chicago\" width=\"1200\" height=\"100\">\n\t\t\t\t<div class=\"carousel-caption\">\n\t\t\t\t\t<h3>Blanca Torres</h3>\n\t\t\t\t\t<p>ESCRITORA</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"item\">\n\t\t\t\t<img src=\"imgs/M3.jpg\" alt=\"Los Angeles\" width=\"1200\" height=\"100\">\n\t\t\t\t<div class=\"carousel-caption\">\n\t\t\t\t\t<h3>Marcia Town</h3>\n\t\t\t\t\t<p>ESCRITORA, LECTORA</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<!-- Left and right controls -->\n\t\t<a class=\"left carousel-control\" href=\"#myCarousel\" role=\"button\"\n\t\t\tdata-slide=\"prev\"> <span class=\"fa fa-chevron-left\"\n\t\t\taria-hidden=\"true\"></span> <span class=\"sr-only\">Anterior</span>\n\t\t</a> <a class=\"right carousel-control\" href=\"#myCarousel\" role=\"button\"\n\t\t\tdata-slide=\"next\"> <span class=\"fa fa-chevron-right\"\n\t\t\taria-hidden=\"true\"></span> <span class=\"sr-only\">Siguiente</span>\n\t\t</a>\n\t</div>\n\n\t<!-- Container (The Band Section) -->\n\n\t<div id=\"site\" class=\"container text-center\">\n\t\t<h3>LEE EN CUALQUIER MOMENTO, EN CUALQUIER LUGAR</h3>\n\t\t<p>\n\t\t\t<em>Nosotros amamos la lectura y escritura!</em>\n\t\t</p>\n\t\t<p>Nuestro proposito es exponer nuestras obras a nuestra comunidad\n\t\t\tde lectores que disfrutan de un buen libro de escritores ecuatorianos\n\t\t\texpertos y principiantes que necesitan el espacio para dar a conocer\n\t\t\tsu talento!</p>\n\t\t<br>\n\t</div>\n\n\t<!-- escritores -->\n\t<div id=\"escritores\" class=\"bg-1\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"container-1\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/mF-H1.jpg\" class=\"img-responsive\" alt=\"\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Mariana Falconí Samaniego</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITORA</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H2.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Franco Ludo</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR LECTOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"container-1\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H3.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Pan Daho</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img src=\"imgs/H4.jpg\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t\t\t<div class=\"caption\">\n\t\t\t\t\t\t\t<strong>Mik Walls</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"caption-2\">\n\t\t\t\t\t\t\t<h3>ESCRITOR</h3>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<!-- Modal -->\n\t<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\n\t\t<div class=\"modal-dialog\">\n\n\t\t\t<!-- Modal content-->\n\t\t\t<div class=\"modal-content\">\n\t\t\t\t<div class=\"modal-header\">\n\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\">×</button>\n\t\t\t\t\t<h4>\n\t\t\t\t\t\t<span class=\"fa fa-lock\"></span> Tickets\n\t\t\t\t\t</h4>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-body\">\n\t\t\t\t\t<form role=\"form\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"psw\"><span class=\"fa fa-shopping-cart\"></span>\n\t\t\t\t\t\t\t\tTickets, $23 per person</label> <input type=\"number\"\n\t\t\t\t\t\t\t\tclass=\"form-control\" id=\"psw\" placeholder=\"How many?\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"usrname\"><span class=\"fa fa-user\"></span>\n\t\t\t\t\t\t\t\tSend To</label> <input type=\"text\" class=\"form-control\" id=\"usrname\"\n\t\t\t\t\t\t\t\tplaceholder=\"Enter email\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-block\">\n\t\t\t\t\t\t\tPay <span class=\"fa fa-check\"></span>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-footer\">\n\t\t\t\t\t<button type=\"submit\" class=\"btn btn-danger btn-default pull-left\"\n\t\t\t\t\t\tdata-dismiss=\"modal\">\n\t\t\t\t\t\t<span class=\"fa fa-minus-circle\"></span> Cancel\n\t\t\t\t\t</button>\n\t\t\t\t\t<p>\n\t\t\t\t\t\tNeed <a href=\"#\">help?</a>\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\n\t<!-- Container (Contact Section) -->\n\t<div id=\"contact\" class=\"container\">\n\t\t<h3 class=\"text-center\">Contactos</h3>\n\t\t<p class=\"text-center\">\n\t\t\t<em>Nosotros amamos a nuestros fans!</em>\n\t\t</p>\n\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-4\">\n\t\t\t\t<p>Fan? Dejanos una nota.</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-map-marker\"></span>Quito, ECUADOR\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-phone\"></span>Teléfono: +00 1515151515\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\t<span class=\"fa fa-envelope\"></span>Coreeo electrónico:\n\t\t\t\t\tmail@mail.com\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-8\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-sm-6 form-group\">\n\t\t\t\t\t\t<input class=\"form-control\" id=\"name\" name=\"name\"\n\t\t\t\t\t\t\tplaceholder=\"Name\" type=\"text\" required>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-sm-6 form-group\">\n\t\t\t\t\t\t<input class=\"form-control\" id=\"email\" name=\"email\"\n\t\t\t\t\t\t\tplaceholder=\"Email\" type=\"email\" required>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<textarea class=\"form-control\" id=\"comments\" name=\"comments\"\n\t\t\t\t\tplaceholder=\"Comment\" rows=\"5\"></textarea>\n\t\t\t\t<br>\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-12 form-group\">\n\t\t\t\t\t\t<button class=\"btn pull-right\" type=\"submit\">Send</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<br>\n\t\t<h3 class=\"text-center\">En Este Blog</h3>\n\t\t<ul class=\"nav nav-tabs\">\n\t\t\t<li class=\"active\"><a data-toggle=\"tab\" href=\"#home\">Mike</a></li>\n\t\t\t<li><a data-toggle=\"tab\" href=\"#menu1\">Chandler</a></li>\n\t\t\t<li><a data-toggle=\"tab\" href=\"#menu2\">Peter</a></li>\n\t\t</ul>\n\n\t\t<div class=\"tab-content\">\n\t\t\t<div id=\"home\" class=\"tab-pane fade in active\">\n\t\t\t\t<h2>Mike Ross, Manager</h2>\n\t\t\t\t<p>Man, we've been on the road for some time now. Looking\n\t\t\t\t\tforward to lorem ipsum.</p>\n\t\t\t</div>\n\t\t\t<div id=\"menu1\" class=\"tab-pane fade\">\n\t\t\t\t<h2>Chandler Bing, Guitarist</h2>\n\t\t\t\t<p>Always a pleasure people! Hope you enjoyed it as much as I\n\t\t\t\t\tdid. Could I BE.. any more pleased?</p>\n\t\t\t</div>\n\t\t\t<div id=\"menu2\" class=\"tab-pane fade\">\n\t\t\t\t<h2>Peter Griffin, Bass player</h2>\n\t\t\t\t<p>I mean, sometimes I enjoy the show, but other times I enjoy\n\t\t\t\t\tother things.</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<!-- Image of location/map -->\n\t<img src=\"imgs/ubicacion.jpg\" class=\"img-responsive\"\n\t\tstyle=\"width: 100%\">\n\n\t<!-- Footer -->\n\t<footer class=\"text-center\">\n\t\t<a class=\"up-arrow\" href=\"#myPage\" data-toggle=\"tooltip\"\n\t\t\ttitle=\"TO TOP\"> <span class=\"fa fa-chevron-up\"></span>\n\t\t</a><br> <br>\n\t\t<p>\n\t\t\tSitio realizado por <a href=\"https://www.google.com\"\n\t\t\t\tdata-toggle=\"tooltip\" title=\"Visita le-vill consultor\">www.le-vill.com</a>\n\t\t</p>\n\t</footer>\n\n\n\t<!-- js home -->\n\t<script src=\"js/jquery.js\"></script>\n\t<script src=\"js/bootstrap.min.js\"></script>\n\t<script src=\"js/home.js\"></script>\n\n</body>\n\n</html>\n",
+			"contents": "'use strict'\n\nvar bcrypt = require('bcrypt-nodejs');\nvar User = require('../models/user');\nvar jwt = require('../services/jwt');\n\nfunction saveUser(req, res) {\n\tvar user = new User();\n\n\tvar params = req.body;\n\n\tconsole.log(params);\n\n\tuser.name = params.name;\n\tuser.surname = params.surname;\n\tuser.email = params.email;\n\tuser.password =params.password;\n\tuser.role = 'ROLE_ADMIN';\n\tuser.image = 'null';\n\n\tif (params.password) {\n\t\t//encripta contrasena\n\t\tbcrypt.hash(params.password, null, null, function(err, hash) {\n\t\t\tuser.password = hash;\n\t\t\tif (user.name != null && user.surname != null && user.email != null) {\n\t\t\t\t//save user\n\t\t\t\tuser.save((err, userStored) => {\n\t\t\t\t\tif (err) {\n\t\t\t\t\t\tres.status(500).send({message: 'error save'});\n\t\t\t\t\t} else {\n\t\t\t\t\t\tif (!userStored) {\n\t\t\t\t\t\t\tres.status(404).send({message: 'no se a registrado el usuario'});\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tres.status(200).send({user: userStored});\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t});\n\t\t\t} else {\n\t\t\t\tres.status(200).send({message: 'all labels'});\n\t\t\t}\n\t\t});\n\t} else {\n\t\tres.status(200).send({message: 'not password'});\n\t}\n\n}\n\nfunction loginUser(req, res) {\n\tvar params = req.body;\n\n\tvar email = params.email;\n\tvar password = params.password;\n\n\tUser.findOne({email: email.toLowerCase()}, (err, user) => {\n\t\tif (err) {\n\t\t\tres.status(500).send({message: 'error reques'});\n\t\t} else {\n\t\t\tif (!user) {\n\t\t\t\tres.status(400).send({message: 'user dont exist'});\n\t\t\t} else {\n\t\t\t\tbcrypt.compare(password, user.password, function (err, check) {\n\t\t\t\t\tif (check) {\n\t\t\t\t\t\t//devuelve los datos del usuario logiado\n\t\t\t\t\t\tif (params.gethash) {\n\t\t\t\t\t\t\t//devuelve un token de jws\n\t\t\t\t\t\t\tres.status(200).send({\n\t\t\t\t\t\t\t\ttoken: jwt.createToken(user)\n\t\t\t\t\t\t\t});\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tres.status(200).send({user});\n\t\t\t\t\t\t}\n\t\t\t\t\t} else {\n\t\t\t\t\t\tres.status(400).send({message: 'user dont login'});\n\t\t\t\t\t}\n\t\t\t\t});\n\t\t\t}\n\t\t}\n\t});\n\n}\n\nfunction updateUser(req,res) {\n\tvar userId = req.params.id;\n\tvar update = req.body;\n\n\tUser.findByIdAndUpdate(userId, update, (err, userUpdated)=>{\n\t\tif (err) {\n\t\t\tres.status(500).send({message: 'Error user update'});\n\t\t} else {\n\t\t\tif (!userUpdated) {\n\t\t\t\tres.status(404).send({message: 'No user update, not found'});\n\t\t\t} else {\n\t\t\t\tres.status(200).send({user: userUpdated});\n\t\t\t}\n\t\t}\n\t});\n}\n\nfunction uploadImage(req, res) {\n\tvar userId = req.params.id;\n\tvar file_name = 'No upload image..';\n\n\tif (req.files) {\n\t\tvar file_path = req.files.image.path;\n\t\t//console.log(req.files.image.path);\n\t\tvar file_split = file_path.split('\\\\');\n\t\tvar file_name = file_split[2];\n\t\tvar ext_split = file_name.split('\\.');\n\t\tvar file_ext = ext_split[1];\n\n\t\tif (file_ext == 'png' || file_ext == 'jpg' || file_ext == 'gif') {\n\t\t\tUser.findByIdAndUpdate(userId, {image: file_name}, (err,userUpdated)=>{\n\t\t\t\tif (!userUpdated) {\n\t\t\t\t\tres.status(404).send({message: 'No user update, not found'});\n\t\t\t\t} else {\n\t\t\t\t\tres.status(200).send({user: userUpdated});\n\t\t\t\t}\n\t\t\t});\n\t\t} else {}\n\n\t} else {\n\t\tres.status(200).send({message: 'not upload image......'});\n\t}\n}\n\nmodule.exports = {\n\tsaveUser,\n\tloginUser,\n\tupdateUser,\n\tuploadImage\n};\n\n",
+			"file": "controllers/user.js",
+			"file_size": 3189,
+			"file_write_time": 132345580358776078,
 			"settings":
 			{
-				"buffer_size": 8585,
+				"buffer_size": 3063,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<!doctype html>\n<!--\n    Programado por Luis Cabrera Benito\n  ____          _____               _ _           _\n |  _ \\        |  __ \\             (_) |         | |\n | |_) |_   _  | |__) |_ _ _ __ _____| |__  _   _| |_ ___\n |  _ <| | | | |  ___/ _` | '__|_  / | '_ \\| | | | __/ _ \\\n | |_) | |_| | | |  | (_| | |   / /| | |_) | |_| | ||  __/\n |____/ \\__, | |_|   \\__,_|_|  /___|_|_.__/ \\__, |\\__\\___|\n         __/ |                               __/ |\n        |___/                               |___/\n\n\n    Blog:       https://parzibyte.me/blog\n    Ayuda:      https://parzibyte.me/blog/contrataciones-ayuda/\n    Contacto:   https://parzibyte.me/blog/contacto/\n-->\n<html lang=\"es\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n<head th:replace=\"layouts/encabezado :: encabezado\"></head>\n<body>\n<nav th:replace=\"layouts/navbar :: navbar\"></nav>\n<main layout:fragment=\"contenido\" role=\"main\" class=\"container\"></main>\n<footer th:replace=\"layouts/pie :: pie\"></footer>\n</body>\n</html>",
-			"file": "/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.5362/sistema-ventas-spring-boot-master/src/main/resources/templates/master.html",
-			"file_size": 976,
-			"file_write_time": 132296557520000000,
+			"file": "middlewares/autenticated.js",
 			"settings":
 			{
-				"buffer_size": 976,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html lang=\"es\" xmlns:th=\"http://www.thymeleaf.org\"\n      xmlns:layout=\"http://www.ultraq.net.nz/thymeleaf/layout\"\n      layout:decorate=\"master\">\n<body>\n<main layout:fragment=\"contenido\">\n    <div class=\"col-12\">\n        <h2>Productos</h2>\n        <div th:classappend=\"'alert-' + (${clase != null} ? ${clase} : info)\" th:if=\"${mensaje != null}\"\n             th:text=\"${mensaje}\"\n             class=\"alert\">\n        </div>\n        <a class=\"btn btn-success mb-2\" th:href=\"@{/productos/agregar}\">Agregar</a>\n        <div class=\"table-responsive\">\n            <table class=\"table table-bordered\">\n                <thead>\n                <tr>\n                    <th>Nombre</th>\n                    <th>Código</th>\n                    <th>Precio</th>\n                    <th>Existencia</th>\n                    <th>Editar</th>\n                    <th>Eliminar</th>\n                </tr>\n                </thead>\n                <tbody>\n                <tr th:each=\"producto : ${productos}\">\n                    <td th:text=\"${producto.nombre}\"></td>\n                    <td th:text=\"${producto.codigo}\"></td>\n                    <td th:text=\"${producto.precio}\"></td>\n                    <td th:text=\"${producto.existencia}\"></td>\n                    <td>\n                        <a class=\"btn btn-warning\" th:href=\"@{/productos/editar/} + ${producto.id}\">Editar <i\n                                class=\"fa fa-edit\"></i></a>\n                    </td>\n                    <td>\n                        <form th:action=\"@{/productos/eliminar}\" method=\"post\">\n                            <input type=\"hidden\" name=\"id\" th:value=\"${producto.id}\"/>\n                            <button type=\"submit\" class=\"btn btn-danger\">Eliminar <i class=\"fa fa-trash\"></i>\n                            </button>\n                        </form>\n                    </td>\n                </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</main>\n</body>\n</html>\n\n\nservicio de entrega a domicilio\n\nSi deseas alguna de mis obras contactarte al whatsapp 0995003896",
-			"file": "/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.14486/sistema-ventas-spring-boot-master/src/main/resources/templates/productos/ver_productos.html",
-			"file_size": 1981,
-			"file_write_time": 132296557520000000,
-			"settings":
-			{
-				"buffer_size": 2080,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 558,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/Stalin/Downloads/index.html",
-			"settings":
-			{
-				"buffer_size": 1864,
-				"line_ending": "Unix"
+				"buffer_size": 609,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -196,6 +259,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: if"
+			],
+			[
+				"",
+				"Build: Cancel"
+			]
 		],
 		"width": 0.0
 	},
@@ -217,10 +300,35 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Stalin/git/SILIB-MEANstack"
+		"/C/Users/Stalin/git/SILIB-MEANstack",
+		"/C/Users/Stalin/git/SILIB-MEANstack/controllers",
+		"/C/Users/Stalin/git/SILIB-MEANstack/middlewares",
+		"/C/Users/Stalin/git/SILIB-MEANstack/models",
+		"/C/Users/Stalin/git/SILIB-MEANstack/routes",
+		"/C/Users/Stalin/git/SILIB-MEANstack/services",
+		"/C/Users/Stalin/git/SILIB-MEANstack/uploads"
 	],
 	"file_history":
 	[
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.5362/sistema-ventas-spring-boot-master/src/main/resources/templates/master.html",
+		"/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.14486/sistema-ventas-spring-boot-master/src/main/resources/templates/productos/ver_productos.html",
+		"/C/Users/Stalin/git/SILIB-MEANstack/package.json",
+		"/C/Users/Stalin/git/SILIB-MEANstack/index.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/controllers/user.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/middlewares/autenticated.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/services/jwt.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/app.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/models/user.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/models/file.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/models/work.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/models/author.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/models/categorie.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/models/price.js",
+		"/C/Users/Stalin/git/SILIB-MEANstack/models/gender.js",
+		"/C/Users/Stalin/Downloads/index.html",
+		"/C/Users/Stalin/git/SILIB-MEANstack/models/book.js",
+		"/C/cygwin64/home/Stalin/.bash_profile",
+		"/C/Users/Stalin/git/SILIB-MEANstack/proyecto-silib.sublime-project",
 		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa3548.4967/ProductosController.java",
 		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa3548.47937/ProductoParaVender.java",
 		"/C/Users/Stalin/AppData/Local/Temp/Rar$DIa3548.44598/Producto.java",
@@ -329,26 +437,7 @@
 		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/services/image-util.service.ts",
 		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/app/app.component.ts",
 		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/pages/produto-detail/produto-detail.html",
-		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/pages/signup/signup.html",
-		"/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/resources/static/css/bootstrap.min.css",
-		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/models/credenciais.dto.ts",
-		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/config/api.config.ts",
-		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/models/produto.dto.ts",
-		"/C/Users/Stalin/git/WS-IONIC/SIGA-UCE-MOVIL/src/models/credenciais.dto.ts",
-		"/C/apache-tomcat-8.5.0/bin/conf/tomcat-users.xml",
-		"/C/apache-tomcat-8.5.0/conf/tomcat-users.xml",
-		"/C/apache-tomcat-8.5.0/conf/tomcat-users.xsd",
-		"/C/tesis/vistas/spring-boot-pagination-bootstrap-ajax-master/src/main/resources/templates/index.html",
-		"/C/tesis/vistas/spring-boot-pagination-bootstrap-ajax-master/src/main/resources/static/js/main.js",
-		"/C/tesis/vistas/spring-boot-pagination-bootstrap-ajax-master/src/main/java/org/trahim/spring/boot/controllers/CountryController.java",
-		"/C/tesis/vistas/EJEMPLO90/ejemplo90/src/Visual/Visual.java",
-		"/C/tesis/vistas/spring-boot-pagination-bootstrap-ajax-master/src/main/java/org/trahim/spring/boot/service/CountryServiceImpl.java",
-		"/C/tesis/vistas/startbootstrap-sb-admin-gh-pages/tables.html",
-		"/C/Users/Stalin/git/SIGA-UCE/SIGA-UCE/src/main/resources/static/vendor/fontawesome-free/css/all.css",
-		"/C/tesis/vistas/EJEMPLO90/ejemplo90/src/VO/ProductoVO.java",
-		"/C/tesis/vistas/spring-boot-pagination-bootstrap-ajax-master/src/main/java/org/trahim/spring/boot/repositories/CountryRepository.java",
-		"/C/tesis/vistas/SpringBoot-MVC-JPA-CRUD-2-master/src/main/java/com/cristianruiz/entity/Usuario.java",
-		"/C/tesis/vistas/SpringBoot-MVC-JPA-CRUD-2-master/src/main/java/com/cristianruiz/entity/Configuracion.java"
+		"/C/tesis/vistas/curso-spring-ionic-frontend-master/src/pages/signup/signup.html"
 	],
 	"find":
 	{
@@ -405,7 +494,7 @@
 	"groups":
 	[
 		{
-			"selected": 18,
+			"selected": 15,
 			"sheets":
 			[
 				{
@@ -434,7 +523,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -463,7 +552,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -491,7 +580,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -519,7 +608,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -546,7 +635,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -574,7 +663,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -603,7 +692,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -631,7 +720,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -659,7 +748,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -687,7 +776,7 @@
 						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -715,7 +804,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -743,7 +832,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -770,7 +859,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -785,8 +874,8 @@
 						"selection":
 						[
 							[
-								761,
-								843
+								447,
+								447
 							]
 						],
 						"settings":
@@ -798,87 +887,33 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
 					"buffer": 14,
+					"file": "routes/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10910,
+						"buffer_size": 582,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4209,
-								4130
+								236,
+								245
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"auto_complete": false,
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8585,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2911,
-								1444
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 648.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.5362/sistema-ventas-spring-boot-master/src/main/resources/templates/master.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 976,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								976,
-								976
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
+						"translation.x": 39.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -886,57 +921,27 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
-					"file": "/C/Users/Stalin/AppData/Local/Temp/Rar$DRa10664.14486/sistema-ventas-spring-boot-master/src/main/resources/templates/productos/ver_productos.html",
+					"buffer": 15,
+					"file": "controllers/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2080,
+						"buffer_size": 3063,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2080,
-								2016
+								3063,
+								3063
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 558,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -946,33 +951,32 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
-					"file": "/C/Users/Stalin/Downloads/index.html",
+					"buffer": 16,
+					"file": "middlewares/autenticated.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1864,
+						"buffer_size": 609,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								0
+								326,
+								326
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -984,7 +988,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 40.0
 	},
 	"layout":
 	{
@@ -1055,7 +1059,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 214.0,
+	"side_bar_width": 182.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
